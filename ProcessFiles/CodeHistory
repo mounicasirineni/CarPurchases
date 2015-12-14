@@ -1,0 +1,36 @@
+data <- read.csv("Statistics_Data_Project.csv", header=T);
+data <- read.csv("Statistics_Project_Data.csv", header=T);
+data
+attach(data)
+Number.of.wins<- data[,5]
+Number.of.wins
+st_1 <- Surface.type[2:23]
+st_1 <- Surface.type[2:23]
+st_2 <- Surface.type[24:36]
+st_3 <- Surface.type[37:51]
+st_4 <- Surface.type[52:57]
+mean(Number.of.wins)
+median(Number.of.wins)
+min(Number.of.wins)
+max(Number.of.wins)
+quantile(Number.of.wins, probs = c(0,25,50,75,100)/100, type=1)
+boxplot(Number.of.wins~Surface.type)
+var(Number.of.wins)
+sd(Number.of.wins)
+hist(Number.of.wins,  col="blue")
+axis(1, xaxp = c(3, 12, 9))
+stem(Number.of.wins)
+qqnorm(Number.of.wins)
+qqline(Number.of.wins)
+tapply(Number.of.wins, Surface.type, length)
+tapply(Number.of.wins, Surface.type, mean)
+tapply(Number.of.wins, Surface.type, var)
+tapply(Number.of.wins, Surface.type, sd)
+fit <- aov (Number.of.wins~factor(Surface.type))
+summary(fit)
+unique(Surface.type)
+fit <- aov (Number.of.wins~factor(Surface.type))
+summary(fit)
+tapply(Number.of.wins, Surface.type, mean)
+plot(tapply(Number.of.wins, Surface.type, mean))
+save.image("C:\\Users\\Mounica\\Desktop\\SEMESTER\\Statistics for Management\\Project\\Code")
